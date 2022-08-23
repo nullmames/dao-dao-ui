@@ -47,13 +47,13 @@ export const CopyToClipboard: FC<CopyToClipboardProps> = ({
         'flex overflow-hidden flex-row gap-1 items-center',
         className
       )}
-      title={value}
       onClick={() => {
         navigator.clipboard.writeText(value)
         setTimeout(() => setCopied(false), 2000)
         setCopied(true)
         toast.success(success)
       }}
+      title={value}
       type="button"
     >
       {copied ? (
